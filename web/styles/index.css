@@ -1,0 +1,101 @@
+/* Copyright 2016 Sabrina van der Gracht and Jourdan Parham*/
+
+html {
+  font-family: arial, sans-serif;
+}
+
+body {
+  border: solid navy 3px;
+  margin: auto;
+  max-width: 700px;
+  min-width: 417px;
+  width: 80%;
+}
+
+h1 {
+  color: navy;
+  margin-left: 5%;
+}
+
+form {
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  width: 90%;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: right;
+  /*width: 142px;*/
+  width: 45%;
+}
+
+input {
+  border: solid grey 1px;
+  display: inline-block;
+  margin-left: 10px;
+  max-width: 300px;
+  width: 50%;
+}
+
+span {
+  display: inline-block;
+  margin-left: 10px;
+  width: 300px;
+}
+
+.error {
+  margin-left: 30px;
+}
+
+#button {
+  background-color:lightgray;
+  border: solid black 1px;
+  margin-bottom: 5px;
+  margin-left: 48%;
+  width: 100px;
+}
+
+footer {
+  border-top: solid navy 3px;
+  margin: auto;
+  padding-left: 30px;
+}
+
+@media (max-width: 400px) {
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  body {
+    min-width: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0px;
+    padding-left: 10%;
+    text-align: left;
+    width: 100%;
+  }
+  
+  input {
+    height: 30px;
+    margin-bottom: 7px;
+    margin-left: 10%;
+    width: 80%;
+  }
+  
+  #button {
+    font-size: 100%;
+    margin-left: 10%;
+  }
+  
+  footer {
+    padding-right: 10px;
+  }
+  
+}
