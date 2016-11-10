@@ -1,4 +1,4 @@
-<%--Copyright 2016 Jourdan Parham and Sabrina van der Gracht--%>
+<%--Copyright 2016 Sabrina van der Gracht and Xenia Zant (Jourdan Parham)--%>
 <%@ include file="/includes/header.html" %>
       <h1>Future Value Calculator</h1>
       <form action="calculate" method="post">

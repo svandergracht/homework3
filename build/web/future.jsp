@@ -1,4 +1,4 @@
-<%--Copyright 2016 Jourdan Parham and Sabrina van der Gracht--%>
+<%--Copyright 2016 Sabrina van der Gracht and Xenia Zant (and Jourdan Parham)--%>
 
 <%@ taglib prefix="elon" uri="/WEB-INF/tlds/elon.tld" %>
 <%@page contentType="text/html" pageEncoding="utf-8"%>
