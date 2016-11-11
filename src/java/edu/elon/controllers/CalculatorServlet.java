@@ -5,7 +5,6 @@ package edu.elon.controllers;
 
 import edu.elon.business.Calculator;
 import java.io.IOException;
-import java.text.NumberFormat;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Sabrina and Jourdan
+ * @author Sabrina and Xenia Jourdan
  */
 public class CalculatorServlet extends HttpServlet {
 
@@ -81,6 +80,11 @@ public class CalculatorServlet extends HttpServlet {
         calculator.setYears(years);
         calculator.setValue(valueDouble);
         request.setAttribute("calculator", calculator);
+        
+        //TRYING NEW THINGS HERE
+        /*Chart chart = new Chart();
+        chart.addValues(calculator);*/
+        
         
         url = "/future.jsp";
       //} else {

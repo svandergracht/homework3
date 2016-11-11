@@ -87,11 +87,11 @@ public class Calculator implements Serializable {
       amountList[i] = currentAmount;
     }*/
     String yearNumber;
-    formattedValueCount = String.format("%3s%20s", "Year", "Value<br>");
-    for (int i = 1; i < time; i++) {
-    yearNumber = "" + i;
+    formattedValueCount = "";
+    for (int i = 1; i <= time; i++) {
+    yearNumber = "" + i + "&emsp;&emsp;&emsp;&emsp;";
     yearValue = calculateValue(principle, percent, i);
-    formattedValueCount = formattedValueCount + String.format("%3s%20.2f", yearNumber, yearValue) + "<br>";
+    formattedValueCount = formattedValueCount + String.format("%3s%1s%20.2f", yearNumber, "$", yearValue) + "<br>";
     }
     return formattedValueCount;
     //return amountList;

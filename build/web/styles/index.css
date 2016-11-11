@@ -46,6 +46,30 @@ span {
   width: 300px;
 }
 
+.chartTitle {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin: auto;
+  padding: 0;
+}
+
+.chart {
+  text-align: right;
+  margin: auto;
+  margin-top: 0;
+  padding: 0;
+}
+
+.chartContainer {
+  margin: auto;
+  padding: 0;
+  width: 170px;
+}
+
+.return {
+  padding-left: 20px;
+}
+
 .error {
   margin-left: 30px;
 }
@@ -72,6 +96,15 @@ footer {
   
   body {
     min-width: 10px;
+    font-size: .8em;
+  }
+  
+  .chartTitle {
+    width: 150px;
+  }
+  
+  .chart {
+    width: 125px;
   }
   
   label {
