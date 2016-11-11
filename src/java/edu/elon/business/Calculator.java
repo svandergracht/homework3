@@ -52,6 +52,14 @@ public class Calculator implements Serializable {
   public void setValue(double value) {
     this.value = value;
   }
+  
+  public String getFormattedValueCount() {
+    return formattedValueCount;
+  }
+  
+  public void setFormattedValueCount(String formattedValueCount) {
+    this.formattedValueCount = formattedValueCount;
+  }
 
   public double calculateValue(double principle, double percent, int time) {
     double rate = percent / 100;

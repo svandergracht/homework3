@@ -43,9 +43,9 @@ public class CalculatorServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
     //initialize message and url variables
-    String message = "";
+    //String message = "";
     String url = "/index.jsp";
-    NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
+    //NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
     Calculator calculator = new Calculator();
 
     //check action
@@ -70,6 +70,7 @@ public class CalculatorServlet extends HttpServlet {
         int years = Integer.parseInt(yearsString);
         double valueDouble = calculator.calculateValue(amountDouble, interest, years);
         String yearChart = calculator.displayYears(amountDouble, interest, years);
+        request.setAttribute("table",yearChart);
         
         //format money
         /*String amount = moneyFormat.format(amountDouble);
