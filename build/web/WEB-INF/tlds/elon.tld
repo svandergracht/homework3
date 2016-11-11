@@ -20,9 +20,4 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
-  <tag>
-    <name>chart</name>
-    <tag-class>edu.elon.tags.YearIteratorTag</tag-class>
-    <body-content>JSP</body-content>
-  </tag>
 </taglib>

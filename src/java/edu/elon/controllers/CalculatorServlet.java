@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Sabrina van der Gracht and Xenia Zantello (and Jourdan Parham)ß
+ * Copyright 2016 Sabrina van der Gracht and Xenia Zantello (and Jourdan Parham)
  */
 package edu.elon.controllers;
 
@@ -9,10 +9,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Sabrina and Xenia Jourdan
+ * @author Sabrina and Xenia (and Jourdan)
  */
 public class CalculatorServlet extends HttpServlet {
 
@@ -41,12 +42,12 @@ public class CalculatorServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
-    //initialize message and url variables
-    //String message = "";
     String url = "/index.jsp";
-    //NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
     Calculator calculator = new Calculator();
-
+    HttpSession session = request.getSession(false);
+    if (session == null) {
+      session = request.getSession(true);
+    }
     //check action
     String action = request.getParameter("action");
     if (action == null) {
@@ -57,13 +58,6 @@ public class CalculatorServlet extends HttpServlet {
       String interestString = request.getParameter("interest");
       String yearsString = request.getParameter("years");
 
-      //create variables to check for doubles
-     // boolean amountBoolean = isDouble(amountString);
-      //boolean interestBoolean = isDouble(interestString);
-      //boolean yearsBoolean = isInteger(yearsString);
-
-      //if (amountBoolean == true && interestBoolean == true && yearsBoolean == true) {
-        //set double variables
         double amountDouble = Double.parseDouble(amountString);
         double interest = Double.parseDouble(interestString);
         int years = Integer.parseInt(yearsString);
@@ -71,48 +65,14 @@ public class CalculatorServlet extends HttpServlet {
         String yearChart = calculator.displayYears(amountDouble, interest, years);
         request.setAttribute("table",yearChart);
         
-        //format money
-        /*String amount = moneyFormat.format(amountDouble);
-        String value = moneyFormat.format(valueDouble);*/
-        
         calculator.setAmount(amountDouble);
         calculator.setInterest(interest);
         calculator.setYears(years);
         calculator.setValue(valueDouble);
-        request.setAttribute("calculator", calculator);
-        
-        //TRYING NEW THINGS HERE
-        /*Chart chart = new Chart();
-        chart.addValues(calculator);*/
-        
+        session.setAttribute("calculator", calculator);   
         
         url = "/future.jsp";
-      //} else {
-       // message = "Please enter valid numbers for each field.";
-       // url = "/index.jsp";
-      //}
     }
     getServletContext().getRequestDispatcher(url).forward(request, response);
-
   }
-
-  /*private boolean isDouble(String s) {
-    try {
-      Double.parseDouble(s);
-    } catch (NumberFormatException e) {
-      return false;
-    }
-    return true;
-  }
-  
-  private boolean isInteger(String s) {
-    try {
-      Integer.parseInt(s);
-    } catch (NumberFormatException e) {
-      return false;
-    }
-    return true;
-  }*/
-  
-
 }

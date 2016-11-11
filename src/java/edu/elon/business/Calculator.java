@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Sabrina
+ * @author Sabrina and Xenia
  */
 public class Calculator implements Serializable {
 
@@ -61,14 +61,6 @@ public class Calculator implements Serializable {
   public void setFormattedValueCount(String formattedValueCount) {
     this.formattedValueCount = formattedValueCount;
   }
-  
-  /*public double[] getAmountList() {
-    return amountList;
-  }
-  
-  public void setAmountList(double[] amountList) {
-    this.amountList = amountList;
-  }*/
 
   public double calculateValue(double principle, double percent, int time) {
     double rate = percent / 100;
@@ -80,12 +72,6 @@ public class Calculator implements Serializable {
   
   public String displayYears(double principle, double percent, int time) {
     double yearValue;
-    //double[] amountList = new double[time];
-    
-    /*for (int i = 0; i<time; i++) {
-      double currentAmount = calculateValue(principle, percent, time);
-      amountList[i] = currentAmount;
-    }*/
     String yearNumber;
     formattedValueCount = "";
     for (int i = 1; i <= time; i++) {
@@ -94,7 +80,6 @@ public class Calculator implements Serializable {
     formattedValueCount = formattedValueCount + String.format("%3s%1s%20.2f", yearNumber, "$", yearValue) + "<br>";
     }
     return formattedValueCount;
-    //return amountList;
   }
 
 }

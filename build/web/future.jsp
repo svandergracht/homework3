@@ -6,14 +6,14 @@
       <h1>Future Value Calculator</h1>
       <form action="calculate" method="post">
         <input type="hidden" name="action" value="add">
-        <label class="left">Investment Amount:</label>
-        <span class="right"><elon:currencyFormat field="${calculator.amount}"/></span><br>
-        <label class="left">Yearly Interest Rate:</label>
-        <span class="right">${calculator.interest}</span><br>
-        <label class="left">Number of Years:</label>
-        <span class="right">${calculator.years}</span><br>
-        <label class="left">Value:</label>
-        <span class="right"><elon:currencyFormat field="${calculator.value}"/></span><br>
+        <label class="leftLabel">Investment Amount:</label>
+        <span class="rightInput"><elon:currencyFormat field="${calculator.amount}"/></span><br>
+        <label class="leftLabel">Yearly Interest Rate:</label>
+        <span class="rightInput">${calculator.interest}</span><br>
+        <label class="leftLabel">Number of Years:</label>
+        <span class="rightInput">${calculator.years}</span><br>
+        <label class="leftLabel">Value:</label>
+        <span class="rightInput"><elon:currencyFormat field="${calculator.value}"/></span><br>
       </form>
         <div class="chartContainer">
           <p class="chartTitle">Year&emsp;&emsp;&emsp;&emsp;Value</p>
