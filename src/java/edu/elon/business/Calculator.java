@@ -1,4 +1,4 @@
-/* Copyright 2016 Xenia Zant and Sabrina van der Gracht (and Jourdan Parham)*/
+/* Copyright 2016 Xenia Zantello and Sabrina van der Gracht (and Jourdan Parham)*/
 
 package edu.elon.business;
 

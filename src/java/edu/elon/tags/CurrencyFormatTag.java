@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Xenia Zant and Sabrina van der Gracht
+ * Copyright 2016 Xenia Zantello and Sabrina van der Gracht
  */
 package edu.elon.tags;
 

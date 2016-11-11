@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Sabrina van der Gracht and Xenia Zant (and Jourdan Parham)ß
+ * Copyright 2016 Sabrina van der Gracht and Xenia Zantello (and Jourdan Parham)ß
  */
 package edu.elon.controllers;
 
