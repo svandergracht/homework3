@@ -15,6 +15,7 @@ public class Calculator implements Serializable {
   private int years;
   private double value;
   private String formattedValueCount;
+  //private double[] amountList;
 
   //no argument constructor
   public Calculator() {
@@ -60,6 +61,14 @@ public class Calculator implements Serializable {
   public void setFormattedValueCount(String formattedValueCount) {
     this.formattedValueCount = formattedValueCount;
   }
+  
+  /*public double[] getAmountList() {
+    return amountList;
+  }
+  
+  public void setAmountList(double[] amountList) {
+    this.amountList = amountList;
+  }*/
 
   public double calculateValue(double principle, double percent, int time) {
     double rate = percent / 100;
@@ -71,14 +80,21 @@ public class Calculator implements Serializable {
   
   public String displayYears(double principle, double percent, int time) {
     double yearValue;
+    //double[] amountList = new double[time];
+    
+    /*for (int i = 0; i<time; i++) {
+      double currentAmount = calculateValue(principle, percent, time);
+      amountList[i] = currentAmount;
+    }*/
     String yearNumber;
-    formattedValueCount = String.format("%3s%20s", "Year", "Value\n");
+    formattedValueCount = String.format("%3s%20s", "Year", "Value<br>");
     for (int i = 1; i < time; i++) {
     yearNumber = "" + i;
     yearValue = calculateValue(principle, percent, i);
-    formattedValueCount = formattedValueCount + String.format("%3s%20.2f%1s", yearNumber, yearValue, "\n");
+    formattedValueCount = formattedValueCount + String.format("%3s%20.2f", yearNumber, yearValue) + "<br>";
     }
     return formattedValueCount;
+    //return amountList;
   }
 
 }

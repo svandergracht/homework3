@@ -36,8 +36,8 @@ public class YearIteratorTag extends BodyTagSupport {
     public void doInitBody() throws JspException {
         iterator = amountArray.iterator();
         if (iterator.hasNext()) {
-            calculator = (Calculator) iterator.next();
-            //this.setYears(calculator);
+           // calculator = (C) iterator.next();
+           // this.setItemAttributes(item);
         }
     }
   

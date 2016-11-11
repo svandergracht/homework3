@@ -14,7 +14,8 @@
         <span>${calculator.years}</span><br>
         <label>Value:</label>
         <span><elon:currencyFormat field="${calculator.value}"/></span><br>
-        <p>${calculator.formattedValueCount}</p>
       </form>
+      <p>${calculator.formattedValueCount}</p>
+      <p><a href="/homework3/index.jsp">Return to calculator.</a></p>
     </main>
     <%@include file="/includes/footer.html" %>
